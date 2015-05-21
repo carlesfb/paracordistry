@@ -7,19 +7,23 @@ paracordistry.config(function($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl	: 'pages/home.html',
-            controller 	: 'mainController'
+            controller 	: 'mainController',
+            controllerAs: 'main'
         })
         .when('/quien', {
             templateUrl : 'pages/quien.html',
-            controller 	: 'quienController'
+            controller 	: 'quienController',
+            controllerAs: 'quien'
         })
         .when('/desvan', {
             templateUrl : 'pages/desvan.html',
-            controller 	: 'desvanController'
+            controller 	: 'desvanController',
+            controllerAs: 'desvan'
         })
         .when('/tienda', {
             templateUrl : 'pages/tienda.html',
-            controller 	: 'StoreController'
+            controller 	: 'StoreController',
+            controllerAs: 'tienda'
         })
         .otherwise({
             redirectTo: '/'
@@ -27,21 +31,23 @@ paracordistry.config(function($routeProvider) {
 });
 
 // Controllers
-paracordistry.controller('mainController', function($scope) {
-    $scope.message = 'Hola, Mundo del Paracord!';
+paracordistry.controller('mainController', function() {
+    var vm= this;
+    vm.message = 'Hola, Mundo del Paracord!';
 });
 
-paracordistry.controller('quienController', function($scope) {
+paracordistry.controller('quienController', function() {
 });
 
-paracordistry.controller('desvanController', function($scope) {
+paracordistry.controller('desvanController', function() {
 });
 
-paracordistry.controller('StoreController', [ '$scope','$http', function($scope, $http) {
-    $scope.products = [];
+paracordistry.controller('StoreController', [ '$http', function($http) {
+    var vm= this;
+    vm.products = [];
 
     $http.get('products.json').success(function(data){
-        $scope.products = data;
+        vm.products = data;
     });
 }]);
 
