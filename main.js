@@ -46,13 +46,15 @@ paracordistry.controller('StoreController', [ '$scope','$http', function($scope,
 }]);
 
 paracordistry.controller('PanelController', function() {
-    this.tab = 1;
+    var vm = this;
+    
+    vm.tab = 1;
 
-    this.isSet = function(checkTab) {
-        return this.tab === checkTab;
+    vm.isSet = function(checkTab) {
+        return vm.tab === checkTab;
     };
 
-    this.setTab = function(activeTab) {
-        this.tab = activeTab;
+    vm.setTab = function(activeTab) {
+        vm.tab = activeTab;
     };
 });
