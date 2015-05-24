@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
     <title>paracordistry</title>
 </head>
-    <body ng-controller='mainController'>
+    <body>
 
         <header>
             <nav class="navbar navbar-default">
@@ -15,9 +15,9 @@
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#quien">Quien</a></li>
+                            <li><a href="#about">Quien</a></li>
                             <li><a href="#desvan">El Desvan</a></li>
-                            <li><a href="#tienda">Tienda</a></li>
+                            <li><a href="#shop">Tienda</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,6 +32,17 @@
          <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.3/angular-route.js"></script>
-        <script src="main.js"></script>
+        <script src="_module.js"></script>
+        <script src="_routes.js"></script>
+        <script src="MainController.js"></script>
+        <script src="/modules/shop/_module.js"></script>
+        <script src="/modules/shop/_routes.js"></script>
+        <script src="/modules/shop/controllers/ShopController.js"></script>
+        <script src="/modules/desvan/_module.js"></script>
+        <script src="/modules/desvan/_routes.js"></script>
+        <script src="/modules/desvan/controllers/DesvanController.js"></script>
+        <script src="/modules/about/_module.js"></script>
+        <script src="/modules/about/_routes.js"></script>
+        <script src="/modules/about/controllers/AboutController.js"></script>
     </body>
 </html>
