@@ -21,5 +21,53 @@
       "Solomon"
     ],
     "images": ["images/Quasi-Cobbed-Solomon-PARACORDISTRY.COM01.jpg"]
+  },
+  {
+    "name": "Pulsera Antorcha Humana v1",
+    "information": [
+      {
+        "description": "Diseño Paralix con cambio de color central.",
+        "colours": "Colores fijos.",
+        "reversible": "No es reversible.",
+        "buckle": "Cierre plástico / nylon.",
+        "material": "paracord 550",
+        "flexibility": "Muy flexible."
+      }
+    ],
+    "additionalInfo": "",
+    "code": "BPHTORCHV1",
+    "price": 9.95,
+    "category": "Pulseras",
+    "tags": [
+      "4 Fantásticos", 
+      "Antorcha",
+      "paracord",
+      "Paralix",
+      "pulsera"
+    ],
+    "images": ["images/fantastic-four-human-torch-v1-01.jpg"]
+  },
+  {
+    "name": "Pulsera Rock Climber",
+    "information": [
+      {
+        "description": "Diseño original de Ken Jimena.",
+        "colours": "Dos, con posibilidad de tres (aunque el diseño funciona mejor con dos).",
+        "reversible": "No es reversible.",
+        "buckle": "Cierre plástico / nylon. (negro o de color)",
+        "material": "paracord 550",
+        "flexibility": "Muy flexible."
+      }
+    ],
+    "additionalInfo": "",
+    "code": "BPROCKCLMBR",
+    "price": 9.95,
+    "category": "Pulseras",
+    "tags": [
+      "paracord",
+      "Rock Climber",
+      "pulsera"
+    ],
+    "images": ["images/Rock-climber.jpg"]
   }
 ]
