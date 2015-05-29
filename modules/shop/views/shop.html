@@ -1,19 +1,77 @@
+<!--<div ng-repeat="row in ['a','b','c','d','e','f'] | chunk:3">
+  <div class="column" ng-repeat="item in row">
+    {{($parent.$index*row.length)+$index+1}}. {{item}}
+  </div>
+</div>
+-->
+<!--
 <div class="jumbotron text-center">
     <h1>Tienda</h1>
-    <div ng-repeat="product in shop.products">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img ng-src="{{product.images[0]}}" width="300" height="300" />
-                </div>
-                <div class="col-md-6">
-                    <p>{{product.name}}</p>
-                    <p>{{product.price}}</p>
-                    <p>Código: {{product.code}}</p>
-                    <p>Categoría: {{product.category}}</p>
-                    <p>Etiquetas: <span ng-repeat="tag in product.tags">{{tag}}, </span></p>
-                </div>
-            </div>            
+    <div ng-repeat="productsRow in shop.products|chunk:3">
+        <div ng-repeat="product in productsRow">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img ng-src="{{shop.products[$index+1].images[0]}}" width="300" height="300" />
+                    </div>
+                    <div class="col-md-6">
+                        <p>{{shop.products[$index+1].name}}</p>
+                        <p>{{shop.products[$index+1].price}}</p>
+                        <p>Código: {{shop.products[$index+1].code}}</p>
+                        <p>Categoría: {{shop.products[$index+1].category}}</p>
+                        <p>Etiquetas: <span ng-repeat="tag in shop.products[$index+1].tags">{{tag}}, </span></p>
+                    </div>
+                </div>            
+            </div>
         </div>
     </div>
 </div>
+-->
+
+<div class="jumbotron text-center">
+    <h1>Tienda</h1>
+    <div ng-repeat="product in shop.products" ng-hide="$index%2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img ng-src="{{shop.products[$index].images[0]}}" width="300" height="300" />
+                </div>
+                <div class="col-md-3">
+                    <p>{{shop.products[$index].name}}</p>
+                    <p>{{shop.products[$index].price}}</p>
+                    <p>Código: {{shop.products[$index].code}}</p>
+                    <p>Categoría: {{shop.products[$index].category}}</p>
+                    <p>Etiquetas: <span ng-repeat="tag in shop.products[$index].tags">{{tag}}, </span></p>
+                </div>
+            
+                <div ng-hide="!shop.products[$index+1]">
+                    <div class="col-md-3">
+                        <img ng-src="{{shop.products[$index+1].images[0]}}" width="300" height="300" />
+                    </div>
+                    <div class="col-md-3">
+                        <p>{{shop.products[$index+1].name}}</p>
+                        <p>{{shop.products[$index+1].price}}</p>
+                        <p>Código: {{shop.products[$index+1].code}}</p>
+                        <p>Categoría: {{shop.products[$index+1].category}}</p>
+                        <p>Etiquetas: <span ng-repeat="tag in shop.products[$index+1].tags">{{tag}}, </span></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<table>
+        <tr ng-repeat="item in shop.products" ng-hide="$index%2">
+          <td>
+          <label>
+            {{ shop.products[$index].name}}
+          </label></td>
+          <td ng-hide="!lists[$index+1]">
+          <label>
+            {{ shop.products[$index+1].name}}
+          </label>
+         </td>
+        </tr>
+    </table>
+-->
