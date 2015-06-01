@@ -69,5 +69,28 @@
       "pulsera"
     ],
     "images": ["images/Rock-climber.jpg"]
+  },
+  {
+    "name": "Revolver Modified",
+    "information": [
+      {
+        "description": "Revolver Modified",
+        "colours": "De uno o dos colores.",
+        "reversible": "No es reversible.",
+        "buckle": "Cierre plástico / nylon. (negro o de color)",
+        "material": "paracord 550",
+        "flexibility": ""
+      }
+    ],
+    "additionalInfo": "",
+    "code": "BPREVMOD",
+    "price": 9.95,
+    "category": "Pulseras",
+    "tags": [
+      "paracord",
+      "Revolver",
+      "pulsera"
+    ],
+    "images": ["images/revolver-modified.jpg"]
   }
 ]
