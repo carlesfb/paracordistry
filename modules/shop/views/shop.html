@@ -1,39 +1,27 @@
-<h2>Tienda</h2>
-<div class="jumbotron text-center">
-    <div ng-repeat="product in shop.products" ng-hide="$index%4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="#">
-                        <img ng-src="{{shop.products[$index].images[0]}}" width="166" height="192" />
-                        <p>{{shop.products[$index].name}}</p>
-                        <p>{{shop.products[$index].price}}</p>
-                    </a>
-                </div>
-            
-                <div ng-hide="!shop.products[$index+1]">
-                    <div class="col-md-3">
-                        <img ng-src="{{shop.products[$index+1].images[0]}}" width="166" height="192" />
-                        <p>{{shop.products[$index+1].name}}</p>
-                        <p>{{shop.products[$index+1].price}}</p>
-                    </div>
-                </div>
-
-                <div ng-hide="!shop.products[$index+2]">
-                    <div class="col-md-3">
-                        <img ng-src="{{shop.products[$index+2].images[0]}}" width="166" height="192" />
-                        <p>{{shop.products[$index+2].name}}</p>
-                        <p>{{shop.products[$index+2].price}}</p>
-                    </div>
-                </div>
-
-                <div ng-hide="!shop.products[$index+3]">
-                    <div class="col-md-3">
-                        <img ng-src="{{shop.products[$index+3].images[0]}}" width="166" height="192" />
-                        <p>{{shop.products[$index+3].name}}</p>
-                        <p>{{shop.products[$index+3].price}}</p>
-                    </div>
-                </div>
+<div class="container col-md-12">
+    <div class="col-md-4">
+        <h3>TIENDA</h3>
+    </div>
+    <div class="col-md-4">
+        <input type="text" ng-model="searchText.name" class="form-control" placeholder="Filtra tu búsqueda"></input>
+    </div>
+    <div class="col-md-4">
+        <select ng-model="orderType" class="form-control">
+            <option value="">Orden por defecto</option>
+            <option value="price">Precio Ascendente</option>
+            <option value="-price">Precio Descendente</option>
+        </select>
+    </div>
+</div>
+<div class="jumbotron text-center col-md-12">
+    <div class="container">
+        <div ng-repeat="product in shop.products|filter:searchText|orderBy:orderType">
+            <div class="col-md-3">
+                <a href="#">
+                    <img ng-src="{{product.images[0]}}" width="166" height="192" />
+                    <p>{{product.name}}</p>
+                    <p>{{product.price}}</p>
+                </a>
             </div>
         </div>
     </div>

@@ -6,14 +6,14 @@
 </head>
     <body>
 
-        <div ng-include="'modules/_main/views/header.html'"></div>
+        <div class="row" ng-include="'modules/_main/views/header.html'"></div>
 
-        <div id="main">
+        <div class="row" >
             <div ng-view class="col-md-8 col-md-offset-1"></div>
             <div ng-include="'modules/_main/views/sidebar.html'" class="col-md-2"></div>
         </div>
 
-        <div ng-include="'modules/_main/views/footer.html'"></div>
+        <div class="row" ng-include="'modules/_main/views/footer.html'"></div>
 
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
          <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
