@@ -17,7 +17,7 @@
     <div class="container">
         <div ng-repeat="product in shop.products|filter:searchText|orderBy:orderType">
             <div class="col-md-3">
-                <a href="#">
+                <a href="#/shop/detail/{{product.code}}">
                     <img ng-src="{{product.images[0]}}" width="166" height="192" />
                     <p>{{product.name}}</p>
                     <p>{{product.price}}</p>

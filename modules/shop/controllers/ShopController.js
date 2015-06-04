@@ -1,19 +1,14 @@
 angular
 	.module('paracordistry.shop')
-	.controller('ShopController', [ '$http', function($http) {
+	.controller('ShopController', [ '$http', 'productsService', function($http, productsService) {
 	    var vm = this;
 	    vm.products = [];
-		vm.tab = 1;
-
-	    $http.get('products.json').success(function(data){
-	        vm.products = data;
-	    });
-
-	    vm.isSet = function(checkTab) {
-	        return vm.tab === checkTab;
-	    };
-
-	    vm.setTab = function(activeTab) {
-	        vm.tab = activeTab;
-	    };
+		
+		$http.get('http://localhost:8080/RESTfulExample/paracordistry/getProducts')
+			.success(function(data){
+				vm.products = data;
+	    	})
+	    	.error(function(data, status, headers, config) {
+      			console.log("AJAX failed to get data, status=" + status);
+      		});
 	}]);
