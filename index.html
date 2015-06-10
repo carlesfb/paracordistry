@@ -2,11 +2,14 @@
 <html ng-app='paracordistry'>
 <head>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/paracordistry.custom.css" />
     <title>paracordistry</title>
 </head>
     <body>
 
         <div class="row" ng-include="'modules/_main/views/header.html'"></div>
+
+        <div class="row" ng-include="'modules/_main/views/menu.html'"></div>
 
         <div class="row" >
             <div ng-view class="col-md-8 col-md-offset-1"></div>
@@ -34,5 +37,14 @@
         <script src="/modules/about/_module.js"></script>
         <script src="/modules/about/_routes.js"></script>
         <script src="/modules/about/controllers/AboutController.js"></script>
+        <script src="/modules/custom/_module.js"></script>
+        <script src="/modules/custom/_routes.js"></script>
+        <script src="/modules/custom/controllers/CustomController.js"></script>
+        <script src="/modules/buckles/_module.js"></script>
+        <script src="/modules/buckles/_routes.js"></script>
+        <script src="/modules/buckles/controllers/BucklesController.js"></script>
+        <script src="/modules/size/_module.js"></script>
+        <script src="/modules/size/_routes.js"></script>
+        <script src="/modules/size/controllers/SizeController.js"></script>
     </body>
 </html>

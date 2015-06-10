@@ -12,6 +12,4 @@ angular
 	        vm.tab = activeTab;
 	    };
 
-	    vm.code = $routeParams.productCode;
-
 	}]);

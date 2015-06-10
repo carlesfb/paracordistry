@@ -1,4 +1,20 @@
 <div class="jumbotron text-center">
-    <h1>Página Principal</h1>
-    <p>{{ main.message }}</p>
+	<div clas="row">
+	    <img ng-src="images/home-custom.jpg" width="806" height="376" ng-show="main.isSet(1)"/>
+        <img ng-src="images/home-a-medida.jpg" width="806" height="376" ng-show="main.isSet(2)"/>
+        <img ng-src="images/home-colours.jpg" width="806" height="376" ng-show="main.isSet(3)"/>
+        <section>
+            <ul class="nav nav-pills">
+                <li ng-class="{ active:main.isSet(1) }">
+                    <a href ng-click="main.setTab(1)">PROYECTOS CUSTOM</a>
+                </li>
+                <li ng-class="{ active:main.isSet(2) }">
+                    <a href ng-click="main.setTab(2)">BRAZALETES A MEDIDA</a>
+                </li>
+                <li ng-class="{ active:main.isSet(3) }">
+                    <a href ng-click="main.setTab(3)">COLORES</a>
+                </li>
+            </ul>
+        </section>
+    </div>
 </div>
