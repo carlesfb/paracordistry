@@ -4,7 +4,7 @@ angular
 	    var vm = this;
 	    vm.products = [];
 		
-		$http.get('http://localhost:8080/ParacordistryRestfulAPI/json/getAll')
+		$http.get('http://localhost:8080/paracordistryAPI/products/list')
 			.success(function(data){
 				vm.products = data;
 	    	})

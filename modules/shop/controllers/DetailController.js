@@ -12,4 +12,13 @@ angular
 	        vm.tab = activeTab;
 	    };
 
+	    $http.get('http://localhost:8080/paracordistryAPI/products/' + $routeParams.productId)
+			.success(function(data){
+				console.log(data);
+				vm.product = data;
+	    	})
+	    	.error(function(data, status, headers, config) {
+      			console.log("AJAX failed to get data, status=" + status);
+      		});
+
 	}]);

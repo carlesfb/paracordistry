@@ -16,8 +16,8 @@
 <div class="jumbotron text-center col-md-12">
     <div class="container">
         <div ng-repeat="product in shop.products|filter:searchText|orderBy:orderType">
-            <div class="col-md-3">
-                <a href="#/shop/detail/{{product.code}}">
+            <div class="left col-md-3">
+                <a href="#/shop/detail/{{product.productId}}">
                     <img ng-src="{{product.images[0]}}" width="166" height="192" />
                     <p>{{product.name}}</p>
                     <p>{{product.price}}</p>

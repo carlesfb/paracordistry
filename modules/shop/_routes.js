@@ -8,7 +8,7 @@ angular
 		            controller 	: 'ShopController',
 		            controllerAs: 'shop'
 		        })
-		        .when('/shop/detail/:productCode', {
+		        .when('/shop/detail/:productId', {
 		        	templateUrl : '/modules/shop/views/detail.html',
 		        	controller 	: 'DetailController',
 		        	controllerAs: 'detail'

@@ -7,14 +7,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img ng-src="{{product.images[0]}}" width="300" height="300" />
+                <img ng-src="{{detail.product.images[0]}}" width="300" height="300" />
             </div>
             <div class="col-md-6">
-                <p>{{product.name}}</p>
-                <p>{{product.price}}</p>
-                <p>Código: {{product.code}}</p>
-                <p>Categoría: {{product.category}}</p>
-                <p>Etiquetas: <span ng-repeat="tag in product.tags">{{tag}}, </span></p>
+                <p>{{detail.product.name}}</p>
+                <p>{{detail.product.price}}</p>
+                <p>Código: {{detail.product.code}}</p>
+                <p>Categoría: {{detail.product.category}}</p>
+                <p>Etiquetas: <span ng-repeat="tag in detail.product.tags">{{tag}}, </span></p>
             </div>
         </div>
 
@@ -32,16 +32,16 @@
 
                 <div class="panel" ng-show="detail.isSet(1)">
                     <ul>
-                        <li>{{product.information[0].description}}</li>
-                        <li>{{product.information[0].colours}}</li>
-                        <li>{{product.information[0].reversible}}</li>
-                        <li>{{product.information[0].buckle}}</li>
-                        <li>{{product.information[0].material}}</li>
-                        <li>{{product.information[0].flexibility}}</li>
+                        <li>{{detail.product.information[0].description}}</li>
+                        <li>{{detail.product.information[0].colours}}</li>
+                        <li>{{detail.product.information[0].reversible}}</li>
+                        <li>{{detail.product.information[0].buckle}}</li>
+                        <li>{{detail.product.information[0].material}}</li>
+                        <li>{{detail.product.information[0].flexibility}}</li>
                     </ul>
                 </div>
                 <div class="panel" ng-show="detail.isSet(2)">
-                    <p>{{product.additionalInfo}}</p>
+                    <p>{{detail.product.additionalInfo}}</p>
                 </div>
             </section>
         </div>
